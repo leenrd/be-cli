@@ -1,4 +1,4 @@
-# To get started
+# ⚡ Start projects at the speed of light
 
 run the following in the terminal
 

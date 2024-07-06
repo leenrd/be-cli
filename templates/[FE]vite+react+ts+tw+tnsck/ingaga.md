@@ -1,1 +1,0 @@
-ay sus miyo
