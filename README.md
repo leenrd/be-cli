@@ -1,8 +1,8 @@
 # ⚡ Start projects at the speed of light
 
-run the following in the terminal
+Run the following in the terminal
 
-> [!Important]
+> [!Code]
 >
 > `npx create-lnrd`
 

@@ -1,6 +1,6 @@
 {
   "name": "create-lnrd",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A cli tool that created a starter project for you",
   "main": "index.js",
   "type": "module",
