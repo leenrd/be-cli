@@ -25,7 +25,7 @@ const QUESTIONS = [
     message: '🦖 Project name:',
 
     validate: function (input) {
-      if (/^([A-Za-z\-\\_\d])+$/.test(input)) return true;
+      if (input === '.' || /^([A-Za-z\-\\_\d])+$/.test(input)) return true;
       else
         return '⚠️ Project name may only include letters, numbers, underscores and hashes.'
           .red;
@@ -38,7 +38,9 @@ inquirer.prompt(QUESTIONS).then(answers => {
   const projectName = answers['project-name'];
   const templatePath = `${__dirname}/templates/${projectChoice}`;
 
-  fs.mkdirSync(`${CURR_DIR}/${projectName}`);
+  if (projectName !== '.') {
+    fs.mkdirSync(`${CURR_DIR}/${projectName}`);
+  }
 
   console.log(' ');
   console.log('Assembling project scaffold...'.magenta);
