@@ -1,0 +1,31 @@
+{
+  "name": "starter-cli",
+  "version": "0.0.1",
+  "description": "A cli tool that created a starter project for you",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "starter-cli": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "starter",
+    "leenard"
+  ],
+  "author": "Leenard Zarate",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "eslint": "^9.6.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "globals": "^15.8.0"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^9.3.4"
+  }
+}
