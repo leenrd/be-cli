@@ -1,10 +1,11 @@
 # ⚡ Start projects at the speed of light
 
 Run the following in the terminal
+`npx create-lnrd`
 
-> [!Code]
->
-> `npx create-lnrd`
+After configuration run the ff:
+`npm i`
+`npm run dev`
 
 ---
 
