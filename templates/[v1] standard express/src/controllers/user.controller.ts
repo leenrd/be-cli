@@ -1,13 +1,12 @@
-import { HTTP_STATUS } from "@/lib/http";
-import UserStore from "@/lib/user-store";
-import UserModel from "@/models/user.model";
-import { Response, Request } from "express";
+import { HTTP_STATUS } from '@/lib/http';
+import UserModel from '@/models/user.model';
+import { Response, Request } from 'express';
 
 const user_controller = async (req: Request, res: Response): Promise<any> => {
   try {
-    const user_id = new UserStore().get();
+    const user_id = req.user_id;
     if (!user_id) {
-      console.log("No token in @User-Store class");
+      console.log('No token in @User-Store class');
       return res
         .status(HTTP_STATUS.BAD_REQUEST)
         .json({ message: "Token doesn't exists" });
@@ -22,10 +21,10 @@ const user_controller = async (req: Request, res: Response): Promise<any> => {
 
     return res.status(HTTP_STATUS.OK).send(user);
   } catch (error) {
-    console.error("Error: @user_controller", error);
+    console.error('Error: @user_controller', error);
     return res
       .status(HTTP_STATUS.BAD_REQUEST)
-      .json({ message: "Error signing up User" });
+      .json({ message: 'Error signing up User' });
   }
 };
 
