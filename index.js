@@ -16,7 +16,7 @@ const QUESTIONS = [
   {
     name: 'project-choice',
     type: 'list',
-    message: '👽 What project template would you like to generate?'.blue,
+    message: '> What project template would you like to generate?'.blue,
     choices: CHOICES,
   },
   {
@@ -43,11 +43,11 @@ inquirer.prompt(QUESTIONS).then(answers => {
   }
 
   console.log(' ');
-  console.log('Assembling project scaffold...'.magenta);
-  console.log('Creating project directory...'.magenta);
+  console.log('Assembling project scaffold...'.blue);
+  console.log('Creating project directory...'.blue);
   createDirectoryContents(templatePath, projectName);
   console.log('-----------------------------------------------------------');
-  console.log('Project scaffold created!'.rainbow, projectName.magenta);
+  console.log('Project scaffold created!'.rainbow, projectName.blue);
   console.log(' ');
   console.log('Run the following commands to get started:'.blue);
   console.log(' ');
